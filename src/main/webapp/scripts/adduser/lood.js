@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 function loadDataToTable() {
     let json = $.ajax({
-        url: session.context + "/RCD/getall",
+        url: session.context + "/Dashboard/getall",
         contentType: "application/json;charset=UTF-8",
         headers: {Accept: "application/json;charset=UTF-8"},
         type: "GET",
@@ -21,6 +21,8 @@ function loadDataToTable() {
                 '<tr>' +
                 '<td class="text-center">' + x.id + '</td>' +
                 '<td> ' + x.userId + '</td>' +
+                '<td> ' + x.status + '</td>' +
+                '<td> ' + x.tableId + '</td>' +
                 '</td>' +
                 '</tr>'
             );

@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/RCD")
+@RequestMapping("/Dashboard")
 public class AppUserDataController {
 
     private Logger LOGGER = LoggerFactory.getLogger(this.getClass());

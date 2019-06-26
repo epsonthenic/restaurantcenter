@@ -17,7 +17,7 @@ public class AppUserServiceImpl implements AppUserService {
     @Override
     public ResponseEntity<String> getUserId() {
         RestTemplate restTemplate = new RestTemplate();
-        String url = ENGINE_URL.concat("/RCD/getuserid");
+        String url = ENGINE_URL.concat("/Dashboard/getuserid");
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url);
@@ -31,5 +31,7 @@ public class AppUserServiceImpl implements AppUserService {
             throw new RuntimeException(e);
         }
     }
+
+
 
 }
